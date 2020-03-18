@@ -91,7 +91,67 @@
                     <view key="view" contentMode="scaleToFill" id="VCA-oB-Nkz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total de Compras" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZP0-Zi-Xiw">
+                                <rect key="frame" x="20" y="89" width="374" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="A7g-Nc-KqV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total de U$:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9E-P8-7ge">
+                                <rect key="frame" x="134.5" y="173" width="145" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Lei-nQ-sgg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1138,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Avv-7z-CbR">
+                                <rect key="frame" x="137" y="242" width="140" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="kFJ-nd-kaF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total de R$:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJr-9w-tNl">
+                                <rect key="frame" x="136" y="330" width="142" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="zjS-ON-L3r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1138,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ydg-w9-Xh1">
+                                <rect key="frame" x="137" y="399" width="140" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="bf6-Aq-cER"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Avv-7z-CbR" firstAttribute="top" secondItem="I9E-P8-7ge" secondAttribute="bottom" constant="35" id="4xV-d8-wSW"/>
+                            <constraint firstItem="ZP0-Zi-Xiw" firstAttribute="top" secondItem="0r5-yS-6Hw" secondAttribute="top" constant="45" id="5t8-dr-5al"/>
+                            <constraint firstItem="Ydg-w9-Xh1" firstAttribute="top" secondItem="yJr-9w-tNl" secondAttribute="bottom" constant="35" id="8EO-T0-FaS"/>
+                            <constraint firstItem="I9E-P8-7ge" firstAttribute="centerX" secondItem="VCA-oB-Nkz" secondAttribute="centerX" id="9Zq-60-4I2"/>
+                            <constraint firstItem="0r5-yS-6Hw" firstAttribute="trailing" secondItem="ZP0-Zi-Xiw" secondAttribute="trailing" constant="20" id="FVR-jv-5Wl"/>
+                            <constraint firstItem="Ydg-w9-Xh1" firstAttribute="centerX" secondItem="VCA-oB-Nkz" secondAttribute="centerX" id="RTF-6S-oke"/>
+                            <constraint firstItem="ZP0-Zi-Xiw" firstAttribute="leading" secondItem="0r5-yS-6Hw" secondAttribute="leading" constant="20" id="d2K-ad-fhj"/>
+                            <constraint firstItem="yJr-9w-tNl" firstAttribute="top" secondItem="Avv-7z-CbR" secondAttribute="bottom" constant="45" id="dfE-3V-e42"/>
+                            <constraint firstItem="Avv-7z-CbR" firstAttribute="centerX" secondItem="VCA-oB-Nkz" secondAttribute="centerX" id="hUH-y6-hYs"/>
+                            <constraint firstItem="I9E-P8-7ge" firstAttribute="top" secondItem="ZP0-Zi-Xiw" secondAttribute="bottom" constant="45" id="jF9-3e-GfT"/>
+                            <constraint firstItem="yJr-9w-tNl" firstAttribute="centerX" secondItem="VCA-oB-Nkz" secondAttribute="centerX" id="oUi-hH-BvD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0r5-yS-6Hw"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Total da Compra" image="briefcase" catalog="system" id="nja-wh-y7C"/>
