@@ -8,19 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		226D32082420E4A800C2E21B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226D32072420E4A800C2E21B /* AppDelegate.swift */; };
-		226D320C2420E4A800C2E21B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226D320B2420E4A800C2E21B /* FirstViewController.swift */; };
 		226D320E2420E4A800C2E21B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226D320D2420E4A800C2E21B /* SecondViewController.swift */; };
 		226D32112420E4A800C2E21B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 226D320F2420E4A800C2E21B /* Main.storyboard */; };
 		226D32132420E4AB00C2E21B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 226D32122420E4AB00C2E21B /* Assets.xcassets */; };
 		226D32162420E4AB00C2E21B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 226D32142420E4AB00C2E21B /* LaunchScreen.storyboard */; };
 		EC4A84232427D38B008197DD /* AppDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC4A84212427D38B008197DD /* AppDataModel.xcdatamodeld */; };
 		EC4A842524280F84008197DD /* UIViewController+Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4A842424280F84008197DD /* UIViewController+Context.swift */; };
+		EC4A8429242FCD44008197DD /* ProductRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4A8428242FCD44008197DD /* ProductRegisterViewController.swift */; };
+		EC4A842B242FCF78008197DD /* Product+image.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4A842A242FCF78008197DD /* Product+image.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		226D32042420E4A800C2E21B /* ComprasUSA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComprasUSA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		226D32072420E4A800C2E21B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		226D320B2420E4A800C2E21B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		226D320D2420E4A800C2E21B /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		226D32102420E4A800C2E21B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		226D32122420E4AB00C2E21B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -28,6 +28,8 @@
 		226D32172420E4AB00C2E21B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC4A84222427D38B008197DD /* AppDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AppDataModel.xcdatamodel; sourceTree = "<group>"; };
 		EC4A842424280F84008197DD /* UIViewController+Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Context.swift"; sourceTree = "<group>"; };
+		EC4A8428242FCD44008197DD /* ProductRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRegisterViewController.swift; sourceTree = "<group>"; };
+		EC4A842A242FCF78008197DD /* Product+image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+image.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +63,6 @@
 			isa = PBXGroup;
 			children = (
 				226D32072420E4A800C2E21B /* AppDelegate.swift */,
-				226D320B2420E4A800C2E21B /* FirstViewController.swift */,
 				EC4A84212427D38B008197DD /* AppDataModel.xcdatamodeld */,
 				226D320D2420E4A800C2E21B /* SecondViewController.swift */,
 				226D320F2420E4A800C2E21B /* Main.storyboard */,
@@ -69,6 +70,8 @@
 				226D32142420E4AB00C2E21B /* LaunchScreen.storyboard */,
 				226D32172420E4AB00C2E21B /* Info.plist */,
 				EC4A842424280F84008197DD /* UIViewController+Context.swift */,
+				EC4A8428242FCD44008197DD /* ProductRegisterViewController.swift */,
+				EC4A842A242FCF78008197DD /* Product+image.swift */,
 			);
 			path = DaniloGustavoRodrigoVinicius;
 			sourceTree = "<group>";
@@ -147,8 +150,9 @@
 				226D320E2420E4A800C2E21B /* SecondViewController.swift in Sources */,
 				EC4A842524280F84008197DD /* UIViewController+Context.swift in Sources */,
 				EC4A84232427D38B008197DD /* AppDataModel.xcdatamodeld in Sources */,
-				226D320C2420E4A800C2E21B /* FirstViewController.swift in Sources */,
 				226D32082420E4A800C2E21B /* AppDelegate.swift in Sources */,
+				EC4A842B242FCF78008197DD /* Product+image.swift in Sources */,
+				EC4A8429242FCD44008197DD /* ProductRegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
