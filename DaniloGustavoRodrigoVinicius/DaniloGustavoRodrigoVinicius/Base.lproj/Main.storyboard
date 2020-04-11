@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="yBQ-fH-3az" customClass="ProductTableViewCell" customModule="ComprasUSA" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="yBQ-fH-3az" customClass="ProductTableViewCell" customModule="ComprasUSA" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="104.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yBQ-fH-3az" id="dxO-bZ-Rnq">
@@ -55,7 +55,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="ivProductPreview" destination="dxO-bZ-Rnq" id="fng-Ar-wVd"/>
+                                    <outlet property="ivPreview" destination="lth-k1-ewo" id="bca-2z-8AJ"/>
                                     <outlet property="lbName" destination="nXL-tq-901" id="U2E-Lk-qsX"/>
                                     <outlet property="lbPrice" destination="sUE-1F-Lnw" id="LUc-X9-8zh"/>
                                     <segue destination="l4a-Sn-may" kind="show" id="aWI-gA-sDh"/>

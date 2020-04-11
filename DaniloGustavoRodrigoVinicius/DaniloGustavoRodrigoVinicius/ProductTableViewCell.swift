@@ -10,12 +10,13 @@ import UIKit
 
 class ProductTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var ivProductPreview: UIImageView!
+    
+    @IBOutlet weak var ivPreview: UIImageView!
     @IBOutlet weak var lbName: UILabel!
     @IBOutlet weak var lbPrice: UILabel!
     
     func prepare(with product: Product){
-        ivProductPreview.image = product.image
+        ivPreview.image = product.image
         lbName.text = product.name
         lbPrice.text = "U$ \(product.price)"
     }
