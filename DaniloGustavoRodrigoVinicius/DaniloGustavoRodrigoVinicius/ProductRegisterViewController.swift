@@ -21,11 +21,18 @@ class ProductRegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.tappedMe))
         ivProduct.addGestureRecognizer(tap)
         ivProduct.isUserInteractionEnabled = true
         
+        if let product = product {
+            tfName.text = product.name
+            ivProduct.image = product.image
+            tfPrice.text = "\(product.price)"
+            swCard.isSelected = product.credit_card
+            btAddEdit.setTitle("Alterar", for: .normal)
+        }
     }
     
     @objc func tappedMe()
