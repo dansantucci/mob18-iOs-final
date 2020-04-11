@@ -45,11 +45,11 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="nXL-tq-901" firstAttribute="leading" secondItem="lth-k1-ewo" secondAttribute="trailing" constant="12" id="2jf-4h-W9d"/>
                                         <constraint firstItem="nXL-tq-901" firstAttribute="top" secondItem="lth-k1-ewo" secondAttribute="top" id="8hR-eW-asY"/>
+                                        <constraint firstItem="nXL-tq-901" firstAttribute="leading" secondItem="lth-k1-ewo" secondAttribute="trailing" constant="12" id="Ack-J6-mAU"/>
                                         <constraint firstItem="lth-k1-ewo" firstAttribute="top" secondItem="dxO-bZ-Rnq" secondAttribute="top" constant="12" id="F9q-71-jpL"/>
+                                        <constraint firstItem="sUE-1F-Lnw" firstAttribute="leading" secondItem="lth-k1-ewo" secondAttribute="trailing" constant="12" id="Jtg-sl-TE6"/>
                                         <constraint firstItem="sUE-1F-Lnw" firstAttribute="top" secondItem="nXL-tq-901" secondAttribute="bottom" constant="12" id="Nja-ot-uhi"/>
-                                        <constraint firstItem="sUE-1F-Lnw" firstAttribute="leading" secondItem="lth-k1-ewo" secondAttribute="trailing" constant="12" id="Uas-9i-fyt"/>
                                         <constraint firstAttribute="bottom" secondItem="lth-k1-ewo" secondAttribute="bottom" constant="12" id="gak-Dq-GgH"/>
                                         <constraint firstItem="lth-k1-ewo" firstAttribute="leading" secondItem="dxO-bZ-Rnq" secondAttribute="leading" constant="8" id="mYr-2G-iAp"/>
                                     </constraints>
@@ -58,7 +58,7 @@
                                     <outlet property="ivPreview" destination="lth-k1-ewo" id="bca-2z-8AJ"/>
                                     <outlet property="lbName" destination="nXL-tq-901" id="U2E-Lk-qsX"/>
                                     <outlet property="lbPrice" destination="sUE-1F-Lnw" id="LUc-X9-8zh"/>
-                                    <segue destination="l4a-Sn-may" kind="show" id="aWI-gA-sDh"/>
+                                    <segue destination="dTX-RG-7Qb" kind="show" id="jX3-9K-wGH"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -445,4 +445,7 @@
         <image name="gear" catalog="system" width="64" height="60"/>
         <image name="plus.circle" catalog="system" width="64" height="62"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="jX3-9K-wGH"/>
+    </inferredMetricsTieBreakers>
 </document>

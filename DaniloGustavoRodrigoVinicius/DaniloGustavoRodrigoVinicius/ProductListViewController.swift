@@ -25,11 +25,14 @@ class ProductListViewController: UITableViewController {
             return
         }
         
-        vc.product = fetchedResultsController.object(at: tableView.indexPathForSelectedRow!)
-        
+        if(tableView.indexPathForSelectedRow != nil){
+            vc.product = fetchedResultsController.object(at: tableView.indexPathForSelectedRow!)
+        } else {
+            return
+        }
     }
     
-    func loadProduct(){
+    private func loadProduct(){
         let fetchRequest: NSFetchRequest<Product> = Product.fetchRequest()
         let sortDescriptor = NSSortDescriptor(key: "price", ascending: false)
         fetchRequest.sortDescriptors = [sortDescriptor]
@@ -58,6 +61,16 @@ class ProductListViewController: UITableViewController {
         
         cell.prepare(with: product)
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            
+            let product = fetchedResultsController.object(at: indexPath)
+            context.delete(product)
+            
+            try? context.save()
+        }
     }
 }
 
