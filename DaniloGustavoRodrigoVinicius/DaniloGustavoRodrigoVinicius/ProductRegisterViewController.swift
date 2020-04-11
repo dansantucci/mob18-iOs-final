@@ -73,7 +73,7 @@ class ProductRegisterViewController: UIViewController {
         product?.name = tfName.text
         product?.price = Double(tfPrice.text!) ?? 0
         product?.credit_card = swCard.isOn
-        product?.photo = ivProduct.image
+        product?.preview = ivProduct.image
         
         try? context.save()
         navigationController?.popViewController(animated: true)

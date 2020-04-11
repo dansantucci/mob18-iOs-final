@@ -16,6 +16,8 @@
 		EC4A842524280F84008197DD /* UIViewController+Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4A842424280F84008197DD /* UIViewController+Context.swift */; };
 		EC4A8429242FCD44008197DD /* ProductRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4A8428242FCD44008197DD /* ProductRegisterViewController.swift */; };
 		EC4A842B242FCF78008197DD /* Product+image.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4A842A242FCF78008197DD /* Product+image.swift */; };
+		EC8EBF1424424C220098B04E /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8EBF1324424C220098B04E /* ProductListViewController.swift */; };
+		EC8EBF16244251A30098B04E /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8EBF15244251A30098B04E /* ProductTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		EC4A842424280F84008197DD /* UIViewController+Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Context.swift"; sourceTree = "<group>"; };
 		EC4A8428242FCD44008197DD /* ProductRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRegisterViewController.swift; sourceTree = "<group>"; };
 		EC4A842A242FCF78008197DD /* Product+image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+image.swift"; sourceTree = "<group>"; };
+		EC8EBF1324424C220098B04E /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
+		EC8EBF15244251A30098B04E /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +67,10 @@
 			isa = PBXGroup;
 			children = (
 				226D32072420E4A800C2E21B /* AppDelegate.swift */,
+				EC8EBF15244251A30098B04E /* ProductTableViewCell.swift */,
 				EC4A84212427D38B008197DD /* AppDataModel.xcdatamodeld */,
 				226D320D2420E4A800C2E21B /* SecondViewController.swift */,
+				EC8EBF1324424C220098B04E /* ProductListViewController.swift */,
 				226D320F2420E4A800C2E21B /* Main.storyboard */,
 				226D32122420E4AB00C2E21B /* Assets.xcassets */,
 				226D32142420E4AB00C2E21B /* LaunchScreen.storyboard */,
@@ -148,7 +154,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				226D320E2420E4A800C2E21B /* SecondViewController.swift in Sources */,
+				EC8EBF16244251A30098B04E /* ProductTableViewCell.swift in Sources */,
 				EC4A842524280F84008197DD /* UIViewController+Context.swift in Sources */,
+				EC8EBF1424424C220098B04E /* ProductListViewController.swift in Sources */,
 				EC4A84232427D38B008197DD /* AppDataModel.xcdatamodeld in Sources */,
 				226D32082420E4A800C2E21B /* AppDelegate.swift in Sources */,
 				EC4A842B242FCF78008197DD /* Product+image.swift in Sources */,
@@ -228,7 +236,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -282,7 +290,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

@@ -10,6 +10,6 @@ import UIKit
 
 extension Product {
     var image: UIImage? {
-        return self.photo as? UIImage
+        return self.preview as? UIImage
     }
 }

@@ -3,7 +3,7 @@
     <entity name="Product" representedClassName="Product" syncable="YES" codeGenerationType="class">
         <attribute name="credit_card" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="photo" optional="YES" attributeType="Transformable"/>
+        <attribute name="preview" optional="YES" attributeType="Transformable" valueTransformerName=""/>
         <attribute name="price" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <relationship name="state" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="State"/>
     </entity>
