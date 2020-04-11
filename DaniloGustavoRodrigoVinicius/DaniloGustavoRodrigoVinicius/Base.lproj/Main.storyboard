@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8rJ-Kc-sve">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -82,7 +82,7 @@
         <!--Ajustes-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="ComprasUSA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="AdjustmentsViewController" customModule="ComprasUSA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -149,7 +149,7 @@
                                                     <rect key="frame" x="286" y="12" width="44" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -157,13 +157,16 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NyR-Pn-jTh">
-                                <rect key="frame" x="253" y="741" width="129" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="On5-mV-9Or">
+                                <rect key="frame" x="253" y="733" width="129" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="J3q-Mk-QfT"/>
+                                    <constraint firstAttribute="height" constant="40" id="QuS-oe-ZRq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Adicionar Estado"/>
+                                <connections>
+                                    <action selector="TestAlert:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="68W-Rf-2HI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -173,25 +176,30 @@
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="9Xe-B3-6RE" secondAttribute="trailing" constant="32" id="Ay2-5H-KIa"/>
                             <constraint firstItem="9Xe-B3-6RE" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="32" id="E2N-VV-91c"/>
                             <constraint firstItem="Zki-gu-pLt" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="32" id="FAb-cA-JLG"/>
-                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="NyR-Pn-jTh" secondAttribute="trailing" constant="32" id="IHr-rt-vFk"/>
                             <constraint firstItem="T8Z-Nn-Fki" firstAttribute="top" secondItem="6hw-tK-QoO" secondAttribute="bottom" constant="16" id="Mrx-I0-cvs"/>
                             <constraint firstItem="IxW-iu-ONo" firstAttribute="leading" secondItem="6hw-tK-QoO" secondAttribute="trailing" constant="16" id="OC2-f7-AkO"/>
                             <constraint firstItem="IxW-iu-ONo" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="32" id="OPt-fO-uEr"/>
                             <constraint firstItem="Ctr-cU-i8k" firstAttribute="leading" secondItem="IxW-iu-ONo" secondAttribute="leading" id="PJO-UE-OxA"/>
                             <constraint firstItem="9Xe-B3-6RE" firstAttribute="top" secondItem="Zki-gu-pLt" secondAttribute="bottom" constant="16" id="PQF-Hr-b1d"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="On5-mV-9Or" secondAttribute="bottom" constant="40" id="Tbj-L9-1gY"/>
+                            <constraint firstItem="On5-mV-9Or" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="253" id="UU7-v0-bah"/>
                             <constraint firstItem="Ctr-cU-i8k" firstAttribute="top" secondItem="T8Z-Nn-Fki" secondAttribute="top" id="UUy-Hz-q1H"/>
                             <constraint firstItem="6hw-tK-QoO" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="32" id="cX3-ia-mP3"/>
-                            <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="NyR-Pn-jTh" secondAttribute="bottom" constant="32" id="f8U-1P-HqJ"/>
                             <constraint firstItem="Ctr-cU-i8k" firstAttribute="leading" secondItem="T8Z-Nn-Fki" secondAttribute="trailing" constant="16" id="gJa-Ii-YZW"/>
                             <constraint firstItem="Zki-gu-pLt" firstAttribute="top" secondItem="Ctr-cU-i8k" secondAttribute="bottom" constant="36" id="hBr-Z5-TqZ"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="Zki-gu-pLt" secondAttribute="trailing" constant="32" id="i7l-dr-e3G"/>
                             <constraint firstItem="Ctr-cU-i8k" firstAttribute="trailing" secondItem="IxW-iu-ONo" secondAttribute="trailing" id="iD6-y5-gPi"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="On5-mV-9Or" secondAttribute="trailing" constant="32" id="sKQ-cS-eB2"/>
                             <constraint firstItem="T8Z-Nn-Fki" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="32" id="ugh-sP-nDd"/>
-                            <constraint firstItem="NyR-Pn-jTh" firstAttribute="top" secondItem="9Xe-B3-6RE" secondAttribute="bottom" constant="16" id="wJw-KT-RYA"/>
+                            <constraint firstItem="On5-mV-9Or" firstAttribute="top" secondItem="9Xe-B3-6RE" secondAttribute="bottom" constant="8" id="zqy-Fk-mY6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Ajustes" image="gear" catalog="system" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="dolar" destination="IxW-iu-ONo" id="db8-VY-vOG"/>
+                        <outlet property="iof" destination="Ctr-cU-i8k" id="veL-We-3mK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -229,7 +237,7 @@
                                     <constraint firstAttribute="height" constant="43" id="kFJ-nd-kaF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
-                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total de R$:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJr-9w-tNl">
@@ -247,7 +255,7 @@
                                     <constraint firstAttribute="height" constant="43" id="bf6-Aq-cER"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
-                                <color key="textColor" systemColor="systemGreenColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -337,7 +345,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalCompressionResistancePriority="700" image="app.gift" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="m0Z-jI-rQ0">
-                                <rect key="frame" x="32" y="207" width="350" height="222"/>
+                                <rect key="frame" x="32" y="207" width="350" height="221.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="224" id="Jaf-TO-qpR"/>
                                 </constraints>
@@ -379,7 +387,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BIQ-31-Ilj">
                                 <rect key="frame" x="32" y="554" width="350" height="70"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="oVB-b1-Lfv"/>
                                 </constraints>
@@ -394,7 +402,7 @@
                                 <rect key="frame" x="333" y="496" width="51" height="31"/>
                             </switch>
                         </subviews>
-                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Q6J-oX-Nz4" firstAttribute="trailing" secondItem="BIQ-31-Ilj" secondAttribute="trailing" constant="32" id="0ec-TY-wLB"/>
                             <constraint firstItem="rbr-3l-UM6" firstAttribute="top" secondItem="Ifs-We-Hfk" secondAttribute="bottom" constant="16" id="2lE-MW-8YD"/>
@@ -441,9 +449,9 @@
     <resources>
         <image name="app.gift" catalog="system" width="64" height="56"/>
         <image name="briefcase" catalog="system" width="64" height="50"/>
-        <image name="cart" catalog="system" width="64" height="52"/>
-        <image name="gear" catalog="system" width="64" height="60"/>
-        <image name="plus.circle" catalog="system" width="64" height="62"/>
+        <image name="cart" catalog="system" width="64" height="50"/>
+        <image name="gear" catalog="system" width="64" height="58"/>
+        <image name="plus.circle" catalog="system" width="64" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="jX3-9K-wGH"/>
