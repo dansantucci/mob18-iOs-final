@@ -9,10 +9,10 @@
 import UIKit
 import CoreData
 
+
 class AdjustmentsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,13 +20,13 @@ class AdjustmentsViewController: UIViewController, UITableViewDelegate, UITableV
         tableView.dataSource = self
         loadState()
         self.checkValues()
-
     }
     
     var fetchedResultsController: NSFetchedResultsController<State>!
     
     @IBOutlet weak var dolar: UITextField!
     @IBOutlet weak var iof: UITextField!
+    
     
     func checkValues(){
         if let path = Bundle.main.path(forResource: "Info", ofType: "plist") {
@@ -44,6 +44,7 @@ class AdjustmentsViewController: UIViewController, UITableViewDelegate, UITableV
         }
     }
     
+    
     @IBAction func TestAlert(_ sender: UIButton) {
         // create the alert
         
@@ -51,6 +52,7 @@ class AdjustmentsViewController: UIViewController, UITableViewDelegate, UITableV
         //add textFields
         alert.addTextField { (state: UITextField!) in
             state.placeholder = "Insira o estado:"
+    
         }
         
         alert.addTextField { (tax: UITextField!) in
@@ -132,5 +134,4 @@ extension AdjustmentsViewController: NSFetchedResultsControllerDelegate {
 
         tableView.reloadData()
     }
-
 }

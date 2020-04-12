@@ -23,6 +23,7 @@ class ProductRegisterViewController: UIViewController, UIPickerViewDelegate, UIP
     var fetchedResultsController: NSFetchedResultsController<State>!
     
     var product: Product?
+    var state: State?
     
     let pickerView = UIPickerView()
     
@@ -38,15 +39,57 @@ class ProductRegisterViewController: UIViewController, UIPickerViewDelegate, UIP
         self.pickerView.delegate = self
         self.pickerView.dataSource = self
         
+        
+        let toolbar = UIToolbar()
+        toolbar.barStyle = UIBarStyle.default
+
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: self, action: #selector(self.done))
+        
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(self.cancel))
+        
+        toolbar.setItems([cancelButton, doneButton], animated: false)
+        
+        toolbar.isUserInteractionEnabled = true
+        toolbar.sizeToFit()
+
+        tvState.inputAccessoryView = toolbar
+        tvState.inputView = self.pickerView
+        
         tvState.inputView = pickerView
+        
+        
         
         if let product = product {
             tfName.text = product.name
             ivProduct.image = product.image
             tfPrice.text = "\(product.price)"
             swCard.isSelected = product.credit_card
+            tvState.text = product.state!.name
             btAddEdit.setTitle("Alterar", for: .normal)
         }
+        
+        
+    }
+    
+    @objc func done(){
+              
+    let row = self.pickerView.selectedRow(inComponent: 0)
+    tvState!.text = getPosition(row: row)
+    let index = IndexPath.init(row: row, section: 0)
+    state = fetchedResultsController.object(at: index)
+    tvState.resignFirstResponder()
+}
+    
+    @objc func cancel(){
+        tvState.resignFirstResponder()
+    }
+    
+    func getPosition(row: Int) -> String {
+        self.pickerView.selectRow(row, inComponent: 0, animated: false)
+        print(row)
+        let indexPath = IndexPath.init(row: row, section: 0)
+        let value = fetchedResultsController.object(at: indexPath)
+        return value.name ?? "Error"
     }
     
     private func loadState(){
@@ -101,6 +144,7 @@ class ProductRegisterViewController: UIViewController, UIPickerViewDelegate, UIP
         
         product?.name = tfName.text
         product?.price = Double(tfPrice.text!) ?? 0
+        product?.state = state!
         product?.credit_card = swCard.isOn
         product?.preview = ivProduct.image
         
@@ -108,7 +152,7 @@ class ProductRegisterViewController: UIViewController, UIPickerViewDelegate, UIP
         navigationController?.popViewController(animated: true)
     }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         let indexPath = IndexPath.init(row: row, section: 0)
         let state = fetchedResultsController.object(at: indexPath)
         return state.name
