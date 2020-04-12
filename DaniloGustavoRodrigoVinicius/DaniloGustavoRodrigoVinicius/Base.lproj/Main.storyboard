@@ -199,6 +199,7 @@
                     <connections>
                         <outlet property="dolar" destination="IxW-iu-ONo" id="db8-VY-vOG"/>
                         <outlet property="iof" destination="Ctr-cU-i8k" id="veL-We-3mK"/>
+                        <outlet property="tableView" destination="9Xe-B3-6RE" id="FdJ-dS-UP1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>

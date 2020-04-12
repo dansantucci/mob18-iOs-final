@@ -9,12 +9,21 @@
 import UIKit
 import CoreData
 
-class AdjustmentsViewController: UIViewController {
+class AdjustmentsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+        loadState()
         self.checkValues()
 
     }
+    
+    var fetchedResultsController: NSFetchedResultsController<State>!
     
     @IBOutlet weak var dolar: UITextField!
     @IBOutlet weak var iof: UITextField!
@@ -62,6 +71,18 @@ class AdjustmentsViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    private func loadState(){
+        let fetchRequest: NSFetchRequest<State> = State.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "name", ascending: false)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        
+        //fetchedResultsController.delegate = self
+        
+        try? fetchedResultsController.performFetch()
+    }
+    
     func saveData(states: UITextField, tax: UITextField){
         let state = State(context: context)
         
@@ -71,6 +92,45 @@ class AdjustmentsViewController: UIViewController {
         try? context.save()
         navigationController?.popViewController(animated: true)
         
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return fetchedResultsController.fetchedObjects?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! UITableViewCell
+        
+        let state = fetchedResultsController.object(at: indexPath)
+        
+        cell.textLabel!.text = state.name
+        cell.detailTextLabel!.text = "\(state.tax)%"
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            
+            let state = fetchedResultsController.object(at: indexPath)
+            context.delete(state)
+            
+            try? context.save()
+        }
+    }
+
+}
+
+extension AdjustmentsViewController: NSFetchedResultsControllerDelegate {
+
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+
+        tableView.reloadData()
     }
 
 }
