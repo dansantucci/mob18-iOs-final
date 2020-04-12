@@ -209,7 +209,7 @@
         <!--Total da Compra-->
         <scene sceneID="hPI-QD-epn">
             <objects>
-                <viewController id="rax-h7-9yL" sceneMemberID="viewController">
+                <viewController id="rax-h7-9yL" customClass="AmoutViewController" customModule="ComprasUSA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VCA-oB-Nkz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -277,6 +277,10 @@
                         <viewLayoutGuide key="safeArea" id="0r5-yS-6Hw"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Total da Compra" image="briefcase" catalog="system" id="nja-wh-y7C"/>
+                    <connections>
+                        <outlet property="lbInternational" destination="Avv-7z-CbR" id="BTK-w7-KXj"/>
+                        <outlet property="lbNational" destination="Ydg-w9-Xh1" id="GV6-wh-h1t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ffk-fo-qLP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

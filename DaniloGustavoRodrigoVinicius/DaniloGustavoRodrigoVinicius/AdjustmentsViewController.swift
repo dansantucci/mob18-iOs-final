@@ -78,7 +78,7 @@ class AdjustmentsViewController: UIViewController, UITableViewDelegate, UITableV
         
         fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         
-        //fetchedResultsController.delegate = self
+        fetchedResultsController.delegate = self
         
         try? fetchedResultsController.performFetch()
     }
