@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
-class ProductRegisterViewController: UIViewController {
+class ProductRegisterViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+   
+    
 
     @IBOutlet weak var tfName: UITextField!
     @IBOutlet weak var ivProduct: UIImageView!
@@ -17,7 +20,11 @@ class ProductRegisterViewController: UIViewController {
     @IBOutlet weak var swCard: UISwitch!
     @IBOutlet weak var btAddEdit: UIButton!
     
+    var fetchedResultsController: NSFetchedResultsController<State>!
+    
     var product: Product?
+    
+    let pickerView = UIPickerView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +33,13 @@ class ProductRegisterViewController: UIViewController {
         ivProduct.addGestureRecognizer(tap)
         ivProduct.isUserInteractionEnabled = true
         
+        loadState()
+        
+        self.pickerView.delegate = self
+        self.pickerView.dataSource = self
+        
+        tvState.inputView = pickerView
+        
         if let product = product {
             tfName.text = product.name
             ivProduct.image = product.image
@@ -33,6 +47,16 @@ class ProductRegisterViewController: UIViewController {
             swCard.isSelected = product.credit_card
             btAddEdit.setTitle("Alterar", for: .normal)
         }
+    }
+    
+    private func loadState(){
+        let fetchRequest: NSFetchRequest<State> = State.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        
+        try? fetchedResultsController.performFetch()
     }
     
     @objc func tappedMe()
@@ -70,8 +94,6 @@ class ProductRegisterViewController: UIViewController {
         
     }
     
-    
-    
     @IBAction func addEditProduct(_ sender: Any) {
         if product == nil {
             product = Product(context: context)
@@ -84,6 +106,22 @@ class ProductRegisterViewController: UIViewController {
         
         try? context.save()
         navigationController?.popViewController(animated: true)
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        let indexPath = IndexPath.init(row: row, section: 0)
+        let state = fetchedResultsController.object(at: indexPath)
+        return state.name
+    }
+    
+    //MARK: UIPickerViewDataSource
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+           1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return fetchedResultsController.fetchedObjects?.count ?? 0
     }
 
 }
