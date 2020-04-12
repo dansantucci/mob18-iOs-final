@@ -46,7 +46,7 @@ class AmoutViewController: UIViewController {
     func sumNational(products: [Product]){
         
         let internationalTotal = products.map{(product) in
-            product.price * Double(product.state?.tax ?? 1)
+            product.price * (1 + (Double(product.state?.tax ?? 1) / 100))
         }.reduce(0, +)
         
         let national = internationalTotal * dolar!

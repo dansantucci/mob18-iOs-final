@@ -65,6 +65,7 @@ class ProductRegisterViewController: UIViewController, UIPickerViewDelegate, UIP
             tfPrice.text = "\(product.price)"
             swCard.isSelected = product.credit_card
             tvState.text = product.state!.name
+            state = product.state
             btAddEdit.setTitle("Alterar", for: .normal)
         }
         
